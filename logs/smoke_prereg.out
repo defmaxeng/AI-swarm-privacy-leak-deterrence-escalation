@@ -1,0 +1,10 @@
+[phase smoke] 8 cells in this shard: 0 done, 0 to judge, 8 to run. mock=False
+  1/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 2.3 min
+  2/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 3.4 min
+  3/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 5.0 min
+  4/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 6.3 min
+  5/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 6.7 min
+  6/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 7.4 min
+  7/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 7.5 min
+  8/8 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 7.6 min
+[phase smoke] finished in 7.6 min: {'ok': 8, 'crashes': 0, 'bad_tool_args': 0, 'escalation_calls': 1, 'eps_with_escalation': 1, 'judge_pending': 0}

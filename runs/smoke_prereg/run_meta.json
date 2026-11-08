@@ -1,0 +1,28 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 17:47:28",
+   "start_ts": 1794178048.1118827,
+   "argv": [
+    "--phase",
+    "smoke",
+    "--out",
+    "runs/smoke_prereg",
+    "--workers",
+    "8"
+   ],
+   "n_cells": 8,
+   "n_todo": 8,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-08 17:55:04",
+   "minutes": 7.6,
+   "ok": 8,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 1,
+   "eps_with_escalation": 1,
+   "judge_pending": 0
+  }
+ ]
+}
