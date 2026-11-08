@@ -1,0 +1,14 @@
+# secrets
+.env
+
+# transient run state
+runs/*_ckpt/
+*.tmp
+__pycache__/
+logs/*_spend.json
+logs/spend.json
+
+# third-party material: re-fetch with scripts/get_data.sh
+ext/
+data/raw/
+paper/

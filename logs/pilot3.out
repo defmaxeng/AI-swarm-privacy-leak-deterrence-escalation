@@ -1,0 +1,5 @@
+[pilot3_adaption] 140 trials to run (0 already done). spend so far $0.0913
+ERR glm-5.2|L1|none|p5|r0: RuntimeError('All routes failed for qwen3.5-397b: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\': None, \\\'c
+ERR glm-5.2|L1|none|p4|r0: RuntimeError('All routes failed for glm-5.2: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\': None, \\\'code\\
+  10 done, 2 errors, spend $0.0913
+[pilot3_adaption] 123 trials to run (17 already done). spend so far $0.0913

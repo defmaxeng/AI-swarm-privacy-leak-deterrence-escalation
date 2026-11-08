@@ -1,0 +1,52 @@
+glm-5.2|L1|none|p5|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 54, in run_trial
+    w["judge"] = judge_text(provider.chat, judge_alias, prof, write_text(w), rid)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\judge.py", line 51, in judge_text
+    resp, _meta = chat_fn(judge_alias, [{"role": "user", "content": prompt}], run_id=run_id, purpose=purpose, **kw)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 213, in chat
+    raise RuntimeError(f"All routes failed for {alias}: {last_err!r}")
+RuntimeError: All routes failed for qwen3.5-397b: _Retryable('RateLimitError("Error code: 429 - {\'error\': {\'message\': \'Inference rate limit reached for this user; retry after 60 seconds\', \'type\': \'rate_limit_error\', \'param\': None, \'code\': \'rate_limit_exceeded\'}}")')
+
+glm-5.2|L1|none|p4|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent", max_tokens=8000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 213, in chat
+    raise RuntimeError(f"All routes failed for {alias}: {last_err!r}")
+RuntimeError: All routes failed for glm-5.2: _Retryable('RateLimitError("Error code: 429 - {\'error\': {\'message\': \'Inference rate limit reached for this user; retry after 60 seconds\', \'type\': \'rate_limit_error\', \'param\': None, \'code\': \'rate_limit_exceeded\'}}")')
+

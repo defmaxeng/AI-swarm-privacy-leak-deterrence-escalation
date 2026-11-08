@@ -1,0 +1,722 @@
+gpt-5-nano|L5|none|p1|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L1|none|p2|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L1|none|p3|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L1|tool|p3|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L5|none|p3|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L5|tool|p3|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L1|none|p4|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L1|tool|p4|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L5|none|p4|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L5|tool|p4|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.
+
+gpt-5-nano|L5|tool|p0|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L1|tool|p0|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L5|tool|p2|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L5|none|p0|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L5|tool|p1|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L1|none|p0|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L1|tool|p1|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L1|none|p1|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 64967. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+
+gpt-5-nano|L5|none|p2|r0
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 105, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 98, in job
+    return run_trial(t, platforms, profiles, a.budget, a.judge, a.exp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run.py", line 50, in run_trial
+    ep = run_episode(provider.chat, t["model"], platforms[t["level"]], profiles[t["persona"]], t["persona"],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 302, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 103, in chat
+    resp = _client(provider).chat.completions.create(**body)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1611, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1474, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\site-packages\openai\_base_client.py", line 1248, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 65536 tokens, but can only afford 58846. To increase, visit https://openrouter.ai/workspaces/default/keys/c114a3be248213e18d1c6d111598df7919653fb82af94704cc607563515923f5 and adjust the key's total limit
+

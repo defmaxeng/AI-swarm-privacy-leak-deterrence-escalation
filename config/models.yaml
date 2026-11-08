@@ -1,0 +1,75 @@
+# Single source of truth for providers and models.
+# Prices are USD per 1M tokens (OpenRouter list prices fetched 2026-11-07), used only
+# as a fallback cost estimate when the provider does not return a cost.
+
+budget:
+  # Applies to cash providers (OpenRouter, HF). Adaption calls are paid from hackathon credits and
+  # tracked separately in logs/adaption_spend.json (list-price estimate).
+  cap_usd: 25.0          # Max's total budget
+  hard_stop_usd: 24.0    # runner refuses new calls past this (margin for in-flight calls)
+
+providers:
+  openrouter:
+    base_url: https://openrouter.ai/api/v1
+    key_env: OPENROUTER_API_KEY
+  hf:
+    base_url: https://router.huggingface.co/v1
+    key_env: HF_TOKEN
+  adaption:              # hackathon credits; Responses API, wrapped to chat format in provider.py
+    kind: adaption
+    key_env: ADAPTION_API_KEY
+    base_url: null       # SDK default (https://api.prod.adaptionlabs.ai) unless ADAPTION_BASE_URL is set
+
+models:
+  gpt-5-nano:
+    provider: openrouter
+    model_id: openai/gpt-5-nano
+    price: {in: 0.05, out: 0.40}
+  claude-haiku-5.5:
+    provider: openrouter
+    model_id: anthropic/claude-haiku-5.5
+    price: {in: 0.10, out: 0.50}
+  claude-sonnet-5.5:
+    provider: openrouter
+    model_id: anthropic/claude-sonnet-5.5
+    price: {in: 2.00, out: 10.00}
+  # Open-weight families. HF first; OpenRouter fallback with the same weights.
+  gpt-oss-120b:
+    provider: hf
+    model_id: openai/gpt-oss-120b
+    fallback: {provider: openrouter, model_id: openai/gpt-oss-120b}
+    price: {in: 0.10, out: 0.50}
+  qwen3-235b:
+    provider: hf
+    model_id: Qwen/Qwen3-235B-A22B-Instruct-2507
+    fallback: {provider: openrouter, model_id: qwen/qwen3-235b-a22b-2507}
+    price: {in: 0.14, out: 0.80}
+  llama-4-scout:
+    provider: hf
+    model_id: meta-llama/Llama-4-Scout-17B-16E-Instruct
+    fallback: {provider: openrouter, model_id: meta-llama/llama-4-scout}
+    price: {in: 0.10, out: 0.30}
+  deepseek-v3.2:
+    provider: hf
+    model_id: deepseek-ai/DeepSeek-V3.2
+    fallback: {provider: openrouter, model_id: deepseek/deepseek-v3.2}
+    price: {in: 0.27, out: 0.40}
+
+  # Adaption-hosted (hackathon credits). Adaption returns no cost; `price` is an OpenRouter
+  # list-price proxy for the same or a similar model, used only to estimate credit use.
+  glm-5.2:            {provider: adaption, model_id: glm-5.2, price: {in: 0.60, out: 2.20}}
+  glm-5.3-flash:      {provider: adaption, model_id: glm-53-flash, price: {in: 0.10, out: 0.40}}
+  qwen3.5-397b:       {provider: adaption, model_id: qwen3.5-397b, price: {in: 0.50, out: 3.60}}
+  qwen3.8-27b:        {provider: adaption, model_id: qwen3.8-27b, price: {in: 0.15, out: 1.875}}
+  deepseek-v4-flash:  {provider: adaption, model_id: deepseek-v4-flash, price: {in: 0.27, out: 0.40}}
+  gemma-4-31b:        {provider: adaption, model_id: gemma-4-31b-it, price: {in: 0.10, out: 0.30}}
+  gemma-4-26b-a4b:    {provider: adaption, model_id: gemma-4-26b-a4b-it, price: {in: 0.08, out: 0.30}}
+
+# 2026-11-07: Max chose Adaption-only (no OpenRouter). Judge history:
+#   qwen3.5-397b -> repeated 504 Gateway Time-outs (long hidden reasoning on judge prompts)
+#   glm-5.2      -> 504s, and on a known heavy leak it hit the 4000-token cap and returned no verdict
+#   gemma-4-31b  -> chosen by Max: ~7 s per call, no hidden reasoning, caught the known leak, passed a clean post
+# Alternate (agreement checks): glm-5.3-flash, which also caught the known leak.
+judge:
+  primary: gemma-4-31b
+  alternate: glm-5.3-flash
