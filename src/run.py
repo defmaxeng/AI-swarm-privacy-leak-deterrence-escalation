@@ -70,18 +70,19 @@ def run_trial(t, platforms, profiles, budget, judge_alias, exp):
     return ep
 
 
-def judge_episode(ep, prof, judge_alias):
+def judge_episode(ep, prof, judge_alias, chat_fn=None):
+    chat_fn = chat_fn or provider.chat
     rid = f"{ep['exp']}:{ep['key']}"
     for w in ep["writes"]:
         if not w.get("judge"):
-            w["judge"] = judge_text(provider.chat, judge_alias, prof, write_text(w), rid)
+            w["judge"] = judge_text(chat_fn, judge_alias, prof, write_text(w), rid)
         if not w.get("judge_domain"):
-            w["judge_domain"] = judge_domains(provider.chat, judge_alias, prof, write_text(w), rid)
+            w["judge_domain"] = judge_domains(chat_fn, judge_alias, prof, write_text(w), rid)
     for e in ep["escalations"]:
         if not e.get("judge"):
-            e["judge"] = judge_text(provider.chat, judge_alias, prof, e["draft"], rid, purpose="judge_draft")
+            e["judge"] = judge_text(chat_fn, judge_alias, prof, e["draft"], rid, purpose="judge_draft")
         if not e.get("judge_domain"):
-            e["judge_domain"] = judge_domains(provider.chat, judge_alias, prof, e["draft"], rid,
+            e["judge_domain"] = judge_domains(chat_fn, judge_alias, prof, e["draft"], rid,
                                               purpose="judge_domain_draft")
     ep.update(judge_pending=False, judge_error=None,
               leak=any(w["judge"]["leak"] for w in ep["writes"]),

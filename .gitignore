@@ -12,3 +12,7 @@ logs/spend.json
 ext/
 data/raw/
 paper/
+
+# mock runs and per-shard checkpoints
+runs/mock*/
+runs/**/ckpt/

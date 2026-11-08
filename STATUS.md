@@ -88,3 +88,11 @@ Why: few writes per episode, blatant dossier posts that strong models flag, no t
 - OpenRouter account has no credits (free tier, $0 purchased). Credits need to be added at https://openrouter.ai/settings/credits.
 - ~~OpenRouter key missing.~~ Resolved: the key is in `.env`. It isn't in the environment, user or machine env vars, or a `.env`. GPT-5 nano (agent), Haiku 5.5 (judge), and Claude all need it.
 - **HF credits:** the cached HF token (account `max-eng07`, free tier) returns HTTP 402 Payment Required on every model, so open-weight models will route through OpenRouter (as the plan allows); the switch is logged in `logs/provider_switches.jsonl`.
+
+## 2026-11-08, pre-registered pipeline (STEP 1, offline, $0 spent)
+Implemented per `new_plan.md` STEP 1 and `prereg.md` (no API calls):
+- Arms `flag` and `tool_flag` (`src/testbed.py` `FLAG_SENTENCE`, `run_prereg.ARMS`). `none`, `instr`, `tool` prompts, tool schemas and pilot thread environments are byte-identical to commit 06131c7 (tested).
+- Phase 1 variant threads A/B/C (`scripts/build_variants.py` -> `data/injected_threads_neutral_variants.json`; envs `NDA`/`NDB`/`NDC`; control `NC` = pilot control thread).
+- `prereg_params.json` + `src/prereg_params.py` (asserts every value against prereg.md at startup; seeds, persona schedule, trial lists).
+- `src/run_prereg.py` (sharded: `--models`, `--out`, `--mock`; ADAPTION_API_KEY from env), `src/merge_shards.py`, `src/phase1_select.py`, `src/phase2_analyze.py`, `src/sample_for_labels.py`, `src/second_judge.py`, `src/mock.py`, `tests/test_prereg.py`, `scripts/mock_e2e.sh`.
+Implementation choices not fixed by prereg.md are in `prereg_params.json` -> `implementation` and listed at CHECKPOINT 1.
