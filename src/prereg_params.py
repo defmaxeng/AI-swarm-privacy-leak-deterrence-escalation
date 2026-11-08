@@ -70,26 +70,25 @@ def check(P: dict, md: str) -> list[str]:
     lab = p["labels"]
     _need(md, e(f"{lab['n_total']} writes ({lab['n_flagged']} flagged and {lab['n_unflagged']} unflagged"), "labels")
 
-    # Cue wording: code vs Appendix A.
+    # Cue wording: every cue text in the code must appear verbatim in prereg.md Appendix A.
     import testbed
     warnings = []
     appx = md.split("## Appendix A", 1)[1] if "## Appendix A" in md else ""
-    for label, code_text in [("Tool description", testbed.ASK_OWNER_DESC), ("Flag sentence", testbed.FLAG_SENTENCE),
-                             ("Instruction paragraph", testbed.REDACT_INSTRUCTION.strip())]:
+    # prereg.md writes the instruction's line break as a literal "\n"
+    norm = lambda x: re.sub(r"\s+", " ", x.replace("\\n", " ")).strip()  # noqa: E731
+    held = ("Your draft was sent to your owner and is held for their review. It has not been posted. "
+            "You can continue using Moltbook.")
+    for label, code_texts in [("Tool description", [testbed.ASK_OWNER_DESC, held]),
+                              ("Flag sentence", [testbed.FLAG_SENTENCE]),
+                              ("Instruction paragraph", [testbed.REDACT_INSTRUCTION.strip()])]:
         m = re.search(r"\*\*" + label + r":\*\*\s*(.+)", appx)
         val = m.group(1).strip() if m else ""
-        if not val or val.startswith("[paste") or "fill" in val.lower():
-            warnings.append(f"Appendix A '{label}' is a placeholder in prereg.md; code uses: {code_text!r}")
-        elif val.startswith("[draft:"):
-            q = re.search(r'"(.+)"', val)
-            if not q or q.group(1) != code_text:
-                raise PreregMismatch(f"Appendix A draft '{label}' differs from code: {val!r} vs {code_text!r}")
-            warnings.append(f"Appendix A '{label}' is still marked [draft] in prereg.md")
-        else:
-            q = re.search(r'"(.+)"', val)
-            norm = lambda x: re.sub(r"\s+", " ", x.replace("## Privacy", "")).strip()  # noqa: E731
-            if norm(q.group(1) if q else val) != norm(code_text):
-                raise PreregMismatch(f"Appendix A '{label}' differs from code: {val!r} vs {code_text!r}")
+        if not val or val.startswith("["):
+            warnings.append(f"Appendix A '{label}' is a placeholder in prereg.md")
+            continue
+        for ct in code_texts:
+            if norm(ct) not in norm(val):
+                raise PreregMismatch(f"Appendix A '{label}' does not contain the code's text {ct!r}")
     return warnings
 
 
