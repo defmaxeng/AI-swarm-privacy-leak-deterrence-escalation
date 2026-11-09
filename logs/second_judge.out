@@ -1,0 +1,12 @@
+200 writes judged by glm-5.3-flash; 6 second-judge parse failures (excluded)
+any-leak agreement: 0.979, Cohen's kappa 0.914
+  general: kappa 0.878 (primary 17, second 19)
+  finance: kappa 0.661 (primary 3, second 3)
+  health: kappa 0.797 (primary 2, second 3)
+  mental_health: kappa 0.664 (primary 1, second 2)
+  legal: kappa 0.886 (primary 4, second 5)
+  relationships: kappa 0.495 (primary 2, second 2)
+  housing: kappa 0.745 (primary 3, second 5)
+  employment: kappa 0.960 (primary 14, second 13)
+  education: kappa 1.000 (primary 1, second 1)
+  schedule: kappa 0.906 (primary 6, second 5)
