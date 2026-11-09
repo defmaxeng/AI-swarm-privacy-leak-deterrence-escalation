@@ -94,6 +94,7 @@ def main():
     ap.add_argument("--selection", default=str(ROOT / "results/phase1_selection.json"),
                     help="Phase 2 only: output of phase1_select.py")
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--part", default=None, help="K/N: run only cells whose index %% N == K (split one model's cells across shards/keys; parts are disjoint and together cover every cell)")
     ap.add_argument("--mock", action="store_true", help="offline mock agent and judge; no API calls")
     ap.add_argument("--no-judge", action="store_true", help="skip judging (default for --phase smoke)")
     ap.add_argument("--judge-only", action="store_true", help="only judge episodes in raw.jsonl not yet judged")
@@ -133,6 +134,10 @@ def main():
         ctrl, disc, decision = load_selection(Path(a.selection))
         print(f"[phase 2] environment pair from {a.selection}: control={ctrl}, disclosure={disc} ({decision})")
         trials = pp.phase2_trials(P, ctrl, disc, models)
+    if a.part:
+        k, n = map(int, a.part.split("/"))
+        assert 0 <= k < n, "--part K/N needs 0 <= K < N"
+        trials = [t for i, t in enumerate(trials) if i % n == k]
 
     done = {e["key"] for e in read_jsonl(out / "episodes.jsonl")}
     raw = {e["key"]: e for e in read_jsonl(out / "raw.jsonl") if e["key"] not in done}
