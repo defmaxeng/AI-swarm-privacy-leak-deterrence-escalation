@@ -1,0 +1,69 @@
+deepseek-v4-flash|NDB|none|p8|s1000
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 177, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 70, in run_one
+    ep = run_episode(chat_fn, t["model"], platforms[(t["environment"], t["seed"])], profiles[t["persona"]],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 404, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent", max_tokens=8000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 235, in chat
+    raise RuntimeError(f"All routes failed for {alias}: {last_err!r}")
+RuntimeError: All routes failed for deepseek-v4-flash: _Retryable('RateLimitError("Error code: 429 - {\'error\': {\'message\': \'Inference rate limit reached for this user; retry after 60 seconds\', \'type\': \'rate_limit_error\', \'param\': None, \'code\': \'rate_limit_exceeded\'}}")')
+
+deepseek-v4-flash|NDC|none|p8|s1000
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 177, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 70, in run_one
+    ep = run_episode(chat_fn, t["model"], platforms[(t["environment"], t["seed"])], profiles[t["persona"]],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 404, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent", max_tokens=8000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 235, in chat
+    raise RuntimeError(f"All routes failed for {alias}: {last_err!r}")
+RuntimeError: All routes failed for deepseek-v4-flash: _Retryable('RateLimitError("Error code: 429 - {\'error\': {\'message\': \'Inference rate limit reached for this user; retry after 60 seconds\', \'type\': \'rate_limit_error\', \'param\': None, \'code\': \'rate_limit_exceeded\'}}")')
+
+deepseek-v4-flash|NC|none|p8|s1000
+Traceback (most recent call last):
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 177, in main
+    ep = f.result()
+         ^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\maxen\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\run_prereg.py", line 70, in run_one
+    ep = run_episode(chat_fn, t["model"], platforms[(t["environment"], t["seed"])], profiles[t["persona"]],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\testbed.py", line 404, in run_episode
+    resp, meta = chat_fn(alias, messages, tools=tools, run_id=run_id, purpose="agent", max_tokens=8000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\src\provider.py", line 235, in chat
+    raise RuntimeError(f"All routes failed for {alias}: {last_err!r}")
+RuntimeError: All routes failed for deepseek-v4-flash: _Retryable('RateLimitError("Error code: 429 - {\'error\': {\'message\': \'Inference rate limit reached for this user; retry after 60 seconds\', \'type\': \'rate_limit_error\', \'param\': None, \'code\': \'rate_limit_exceeded\'}}")')
+
