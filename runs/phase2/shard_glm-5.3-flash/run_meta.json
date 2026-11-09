@@ -1,0 +1,78 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 20:12:40",
+   "start_ts": 1794186760.298836,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash",
+    "--workers",
+    "6"
+   ],
+   "n_cells": 60,
+   "n_todo": 60,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 21:58:40",
+   "start_ts": 1794193120.7198071,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--part",
+    "0/2",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash",
+    "--workers",
+    "5"
+   ],
+   "n_cells": 30,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-08 22:54:48",
+   "minutes": 56.1,
+   "ok": 14,
+   "crashes": 1,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  },
+  {
+   "start": "2026-11-08 22:56:07",
+   "start_ts": 1794196567.6628222,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash",
+    "--workers",
+    "5",
+    "--part",
+    "0/2"
+   ],
+   "n_cells": 30,
+   "n_todo": 1,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-08 23:06:47",
+   "minutes": 10.7,
+   "ok": 1,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

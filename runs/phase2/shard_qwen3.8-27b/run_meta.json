@@ -1,0 +1,84 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 20:12:40",
+   "start_ts": 1794186760.3331661,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "qwen3.8-27b",
+    "--out",
+    "runs/phase2/shard_qwen3.8-27b",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 60,
+   "n_todo": 60,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 22:48:05",
+   "start_ts": 1794196085.4678903,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "qwen3.8-27b",
+    "--out",
+    "runs/phase2/shard_qwen3.8-27b",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 60,
+   "n_todo": 10,
+   "n_to_judge": 1,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 23:25:07",
+   "start_ts": 1794198307.238616,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "qwen3.8-27b",
+    "--out",
+    "runs/phase2/shard_qwen3.8-27b",
+    "--workers",
+    "4"
+   ],
+   "n_cells": 60,
+   "n_todo": 9,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 23:25:51",
+   "start_ts": 1794198351.9765956,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "qwen3.8-27b",
+    "--out",
+    "runs/phase2/shard_qwen3.8-27b",
+    "--workers",
+    "4"
+   ],
+   "n_cells": 60,
+   "n_todo": 8,
+   "n_to_judge": 1,
+   "mock": false,
+   "end": "2026-11-08 23:54:09",
+   "minutes": 28.3,
+   "ok": 9,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

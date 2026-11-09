@@ -1,0 +1,72 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 21:58:40",
+   "start_ts": 1794193120.4634755,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--part",
+    "1/2",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash_p1",
+    "--workers",
+    "5"
+   ],
+   "n_cells": 30,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 22:48:05",
+   "start_ts": 1794196085.887867,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--part",
+    "1/2",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash_p1",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 30,
+   "n_todo": 11,
+   "n_to_judge": 2,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 23:25:52",
+   "start_ts": 1794198352.1125076,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase2/shard_glm-5.3-flash_p1",
+    "--workers",
+    "4",
+    "--part",
+    "1/2"
+   ],
+   "n_cells": 30,
+   "n_todo": 11,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-08 23:55:53",
+   "minutes": 30.0,
+   "ok": 11,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 1,
+   "eps_with_escalation": 1,
+   "judge_pending": 0
+  }
+ ]
+}

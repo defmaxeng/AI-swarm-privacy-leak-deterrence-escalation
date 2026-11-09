@@ -1,0 +1,30 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 20:12:40",
+   "start_ts": 1794186760.321947,
+   "argv": [
+    "--phase",
+    "2",
+    "--models",
+    "deepseek-v4-flash",
+    "--out",
+    "runs/phase2/shard_deepseek-v4-flash",
+    "--workers",
+    "5"
+   ],
+   "n_cells": 60,
+   "n_todo": 60,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-08 21:34:07",
+   "minutes": 81.4,
+   "ok": 60,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 5,
+   "eps_with_escalation": 5,
+   "judge_pending": 0
+  }
+ ]
+}

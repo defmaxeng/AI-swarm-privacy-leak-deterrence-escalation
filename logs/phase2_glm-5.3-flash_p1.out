@@ -1,0 +1,29 @@
+[phase 2] environment pair from C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\results\phase1_selection.json: control=NC, disclosure=NDA (variant A selected (gap 29.53 pp, control RLR 19.4%))
+[phase 2] 30 cells in this shard: 15 done, 0 to judge, 15 to run. mock=False
+CRASH glm-5.3-flash|NDA|none|p1|s2001: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+CRASH glm-5.3-flash|NDA|none|p8|s2003: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+CRASH glm-5.3-flash|NDA|tool|p8|s2003: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+CRASH glm-5.3-flash|NDA|tool_flag|p7|s2002: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'para
+CRASH glm-5.3-flash|NDA|tool_flag|p8|s2003: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'para
+  1/15 done | crashes 5 | malformed tool args 0 | escalation calls 0 in 0 eps | 34.2 min
+  2/15 done | crashes 5 | malformed tool args 0 | escalation calls 0 in 0 eps | 42.6 min
+[phase 2] environment pair from C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\results\phase1_selection.json: control=NC, disclosure=NDA (variant A selected (gap 29.53 pp, control RLR 19.4%))
+[phase 2] 30 cells in this shard: 17 done, 2 to judge, 11 to run. mock=False
+  1/13 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 12.0 min
+  2/13 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 13.0 min
+CRASH glm-5.3-flash|NDA|none|p1|s2001: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+CRASH glm-5.3-flash|NDA|tool_flag|p7|s2002: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'para
+[phase 2] environment pair from C:\Users\maxen\OneDrive\Desktop\AI-safety\Apart_hackathon\results\phase1_selection.json: control=NC, disclosure=NDA (variant A selected (gap 29.53 pp, control RLR 19.4%))
+[phase 2] 30 cells in this shard: 19 done, 0 to judge, 11 to run. mock=False
+  1/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 2.4 min
+  2/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 6.8 min
+  3/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 7.9 min
+  4/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 11.3 min
+  5/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 13.7 min
+  6/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 14.9 min
+  7/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 18.6 min
+  8/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 23.6 min
+  9/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 25.9 min
+  10/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 26.8 min
+  11/11 done | crashes 0 | malformed tool args 0 | escalation calls 1 in 1 eps | 30.0 min
+[phase 2] finished in 30.0 min: {'ok': 11, 'crashes': 0, 'bad_tool_args': 0, 'escalation_calls': 1, 'eps_with_escalation': 1, 'judge_pending': 0}
