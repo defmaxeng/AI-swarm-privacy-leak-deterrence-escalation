@@ -24,7 +24,7 @@ SHARDS = [
     ("glm-5.3-flash", "0/2", "runs/phase2/shard_glm-5.3-flash", "ADAPTION_API_KEY", 5),
     ("glm-5.3-flash", "1/2", "runs/phase2/shard_glm-5.3-flash_p1", "ADAPTION_API_KEY_2", 3),
     ("gemma-4-26b-a4b", None, "runs/phase2/shard_gemma-4-26b-a4b", "ADAPTION_API_KEY", 2),
-    ("qwen3.8-27b", None, "runs/phase2/shard_qwen3.8-27b", "ADAPTION_API_KEY_2", 3),
+    ("qwen3.8-27b", None, "runs/phase2/shard_qwen3.8-27b", "ADAPTION_API_KEY", 4),
     ("deepseek-v4-flash", None, "runs/phase2/shard_deepseek-v4-flash", "ADAPTION_API_KEY_2", 2),
 ]
 LOG = ROOT / "logs/phase2_supervisor.out"
