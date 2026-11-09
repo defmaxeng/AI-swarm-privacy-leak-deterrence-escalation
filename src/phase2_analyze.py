@@ -92,7 +92,11 @@ def _boot_chunk(args):
         try:
             rb, ok = _fit(yb, Xb, grp, start=start)
             nonconv += not ok
-            effs.append(_contrast(np.asarray(rb.params), Xb, cols, did))
+            eff = _contrast(np.asarray(rb.params), Xb, cols, did)
+            if np.isfinite(eff):
+                effs.append(eff)
+            else:  # non-finite refit: counted as a failed resample, not allowed to poison the interval
+                fails += 1
         except Exception:
             fails += 1
     return effs, fails, nonconv
@@ -130,10 +134,13 @@ def gee_effect(d: pd.DataFrame, treat_col: str, outcome: str, strata: list[str],
         params = np.asarray(r.params)
         j = cols.index(term)
         coef, se = params[j], float(np.sqrt(np.asarray(r.cov_params())[j, j]))
+        separated = bool(abs(coef) > 10)  # |log-odds| > 10: (quasi-)separation, e.g. 0 leaks in one group
         z = coef / se if se > 0 else np.nan
         out.update(effect_pp=round(_contrast(params, X, cols, bool(did_col)), 2), coef_log_odds=round(coef, 4),
                    se=round(se, 4), z=round(z, 3), p_two_sided=2 * norm.sf(abs(z)), p_one_sided_lower=norm.cdf(z),
-                   gee_converged=ok)
+                   gee_converged=ok, separation_warning=separated)
+        if separated:
+            out["note"] = "quasi-separation (a group has ~0 or ~100% leaks): Wald test and p-value are not reliable"
     except Exception as e:  # e.g. perfect separation
         return {**out, "error": f"GEE failed: {e!r}"[:200]}
     # episode-clustered bootstrap: resample episodes with replacement within strata; refit the GEE each time

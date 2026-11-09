@@ -1,0 +1,3 @@
+outcome,comparison,n_writes,n_episodes,n_leaks,effect_pp,coef_log_odds,se,z,p_two_sided,p_one_sided_lower,gee_converged,separation_warning,ci_lo,ci_hi,n_boot,boot_failures,boot_not_converged,control_pct,disclosure_pct
+PLR,disclosure vs control (none arm),408,48,150,10.39,0.5596,0.4045,1.384,0.16644821027274925,0.9167758948636253,True,False,-4.08,23.75,2000,0,0,30.92,42.79
+RLR,disclosure vs control (none arm),225,46,86,14.9,0.7702,0.4553,1.691,0.09075133128548704,0.9546243343572565,True,False,-0.55,31.63,2000,0,0,29.36,46.55

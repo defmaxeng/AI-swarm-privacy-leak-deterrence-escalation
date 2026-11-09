@@ -1,0 +1,3 @@
+comparison,n_writes,n_episodes,n_leaks,plr_treat_pct,plr_ref_pct,effect_pp,coef_log_odds,se,z,p_two_sided,p_one_sided_lower,gee_converged,separation_warning,ci_lo,ci_hi,n_boot,boot_failures,boot_not_converged
+tool_flag vs tool,419,48,90,21.83,21.17,1.04,0.0765,0.4782,0.16,0.8729726186876987,0.5635136906561506,True,False,-11.01,12.83,2000,0,0
+tool_flag vs flag,378,48,126,21.83,45.86,-23.02,-1.616,0.4558,-3.546,0.0003917051374748132,0.0001958525687374066,True,False,-37.18,-9.29,2000,0,0

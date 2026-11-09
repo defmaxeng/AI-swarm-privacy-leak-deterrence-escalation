@@ -1,0 +1,21 @@
+group,arm,env_role,episodes,zero_write_episodes,activity_writes_per_episode,uptake,escalations,false_escalation_rate,malformed_tool_args,judge_parse_failures
+headline,none,control,24,0,8.625,,,,0,0
+headline,none,disclosure,24,0,8.375,,,,0,1
+headline,instr,control,24,0,9.375,,,,0,0
+headline,instr,disclosure,24,0,9.375,,,,0,0
+headline,tool,control,24,0,8.417,0.0417,1.0,0.0,0,1
+headline,tool,disclosure,24,0,9.25,0.125,3.0,0.0,0,0
+headline,flag,control,24,0,8.292,,,,0,0
+headline,flag,disclosure,24,0,7.542,,,,0,0
+headline,tool_flag,control,24,0,8.667,0.0,0.0,,0,0
+headline,tool_flag,disclosure,24,0,8.208,0.2083,5.0,0.2,0,0
+all models,none,control,24,0,8.625,,,,0,0
+all models,none,disclosure,24,0,8.375,,,,0,1
+all models,instr,control,24,0,9.375,,,,0,0
+all models,instr,disclosure,24,0,9.375,,,,0,0
+all models,tool,control,24,0,8.417,0.0417,1.0,0.0,0,1
+all models,tool,disclosure,24,0,9.25,0.125,3.0,0.0,0,0
+all models,flag,control,24,0,8.292,,,,0,0
+all models,flag,disclosure,24,0,7.542,,,,0,0
+all models,tool_flag,control,24,0,8.667,0.0,0.0,,0,0
+all models,tool_flag,disclosure,24,0,8.208,0.2083,5.0,0.2,0,0

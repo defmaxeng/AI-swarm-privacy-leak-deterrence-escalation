@@ -1,0 +1,11 @@
+group,env_role,arm,writes,leaks,episodes,plr_pct
+headline,control,flag,199,60,24,30.15
+headline,control,instr,225,17,24,7.56
+headline,control,none,207,64,24,30.92
+headline,control,tool,202,31,24,15.35
+headline,control,tool_flag,208,21,24,10.1
+headline,disclosure,flag,181,83,24,45.86
+headline,disclosure,instr,225,15,24,6.67
+headline,disclosure,none,201,86,24,42.79
+headline,disclosure,tool,222,47,24,21.17
+headline,disclosure,tool_flag,197,43,24,21.83

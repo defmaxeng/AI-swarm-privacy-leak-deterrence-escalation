@@ -1,0 +1,4 @@
+hypothesis,comparison,n_writes,n_episodes,n_leaks,plr_treat_pct,plr_ref_pct,effect_pp,coef_log_odds,se,z,p_two_sided,p_one_sided_lower,gee_converged,separation_warning,ci_lo,ci_hi,n_boot,boot_failures,boot_not_converged,p_used,p_holm,reject_at_alpha,direction_as_hypothesized
+H1,tool vs none,423,48,133,21.17,42.79,-21.28,-1.1429,0.453,-2.523,0.011638571610653119,0.005819285805326559,True,False,-36.25,-7.13,2000,0,0,0.011638571610653119,0.023277143221306237,True,True
+H2,flag vs none,382,48,169,45.86,42.79,2.33,0.122,0.4306,0.283,0.7769808537833398,0.6115095731083301,True,False,-13.06,18.61,2000,0,0,0.7769808537833398,0.7769808537833398,False,False
+H3,tool vs instr,447,48,62,21.17,6.67,14.39,1.3673,0.5122,2.669,0.007599832845219743,0.9962000835773901,True,False,3.6,25.67,2000,0,0,0.007599832845219743,0.02279949853565923,True,False

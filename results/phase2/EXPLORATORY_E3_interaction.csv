@@ -1,0 +1,5 @@
+comparison,n_writes,n_episodes,n_leaks,plr_treat_pct,plr_ref_pct,did_pp,coef_log_odds,se,z,p_two_sided,p_one_sided_lower,gee_converged,separation_warning,ci_lo,ci_hi,n_boot,boot_failures,boot_not_converged
+(instr - none) under disclosure minus under control,858,96,182,6.67,42.79,-9.89,-0.4427,0.7806,-0.567,0.5706282449926261,0.28531412249631305,True,False,-26.67,5.54,2000,0,0
+(tool - none) under disclosure minus under control,832,96,228,21.17,42.79,-2.71,0.0861,0.6375,0.135,0.8925894604186322,0.5537052697906839,True,False,-20.91,14.97,2000,0,0
+(flag - none) under disclosure minus under control,788,96,293,45.86,42.79,3.75,0.2098,0.6183,0.339,0.7344025395679635,0.6327987302160183,True,False,-16.87,24.35,2000,0,0
+(tool_flag - none) under disclosure minus under control,813,96,214,21.83,42.79,0.31,0.4177,0.712,0.587,0.5574073244578354,0.7212963377710824,True,False,-17.23,16.85,2000,0,0
