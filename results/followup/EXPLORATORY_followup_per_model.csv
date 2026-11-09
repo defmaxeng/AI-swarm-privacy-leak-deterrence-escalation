@@ -1,0 +1,9 @@
+model,arm,writes,leaks,episodes,plr_pct
+deepseek-v4-flash,instr,53,9,6,16.98
+deepseek-v4-flash,instr_tool,57,11,6,19.3
+gemma-4-26b-a4b,instr,35,2,6,5.71
+gemma-4-26b-a4b,instr_tool,40,8,6,20.0
+glm-5.3-flash,instr,56,0,6,0.0
+glm-5.3-flash,instr_tool,74,1,6,1.35
+qwen3.8-27b,instr,61,8,6,13.11
+qwen3.8-27b,instr_tool,69,0,6,0.0

@@ -1,0 +1,30 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-09 01:32:21",
+   "start_ts": 1794205941.2785978,
+   "argv": [
+    "--phase",
+    "followup",
+    "--models",
+    "gemma-4-26b-a4b",
+    "--out",
+    "runs/followup/shard_gemma-4-26b-a4b",
+    "--workers",
+    "2"
+   ],
+   "n_cells": 12,
+   "n_todo": 12,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-09 01:48:34",
+   "minutes": 16.2,
+   "ok": 12,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+01:32:13 supervisor started; checking every 120s
+01:32:13 RELAUNCH glm-5.3-flash (12 cells left, key ADAPTION_API_KEY, 3 workers)
+01:32:13 RELAUNCH qwen3.8-27b (12 cells left, key ADAPTION_API_KEY, 3 workers)
+01:32:14 RELAUNCH deepseek-v4-flash (12 cells left, key ADAPTION_API_KEY_2, 3 workers)
+01:32:14 RELAUNCH gemma-4-26b-a4b (12 cells left, key ADAPTION_API_KEY_2, 2 workers)
+01:32:14 glm-5.3-flash 0/12 | qwen3.8-27b 0/12 | deepseek-v4-flash 0/12 | gemma-4-26b-a4b 0/12
+01:34:14 glm-5.3-flash 0/12 run | qwen3.8-27b 0/12 run | deepseek-v4-flash 0/12 run | gemma-4-26b-a4b 1/12 run
+01:36:15 glm-5.3-flash 0/12 run | qwen3.8-27b 0/12 run | deepseek-v4-flash 0/12 run | gemma-4-26b-a4b 2/12 run
+01:38:15 glm-5.3-flash 0/12 run | qwen3.8-27b 0/12 run | deepseek-v4-flash 0/12 run | gemma-4-26b-a4b 4/12 run
+01:40:16 glm-5.3-flash 0/12 run | qwen3.8-27b 1/12 run | deepseek-v4-flash 2/12 run | gemma-4-26b-a4b 6/12 run
+01:42:17 glm-5.3-flash 1/12 run | qwen3.8-27b 3/12 run | deepseek-v4-flash 3/12 run | gemma-4-26b-a4b 7/12 run
+01:44:18 glm-5.3-flash 3/12 run | qwen3.8-27b 3/12 run | deepseek-v4-flash 3/12 run | gemma-4-26b-a4b 8/12 run
+01:46:19 glm-5.3-flash 3/12 run | qwen3.8-27b 3/12 run | deepseek-v4-flash 4/12 run | gemma-4-26b-a4b 10/12 run
+01:48:19 glm-5.3-flash 3/12 run | qwen3.8-27b 3/12 run | deepseek-v4-flash 4/12 run | gemma-4-26b-a4b 11/12 run
+01:50:20 glm-5.3-flash 3/12 run | qwen3.8-27b 4/12 run | deepseek-v4-flash 6/12 run | gemma-4-26b-a4b 12/12
+01:52:20 glm-5.3-flash 4/12 run | qwen3.8-27b 5/12 run | deepseek-v4-flash 9/12 run | gemma-4-26b-a4b 12/12
+01:54:21 glm-5.3-flash 4/12 run | qwen3.8-27b 6/12 run | deepseek-v4-flash 11/12 run | gemma-4-26b-a4b 12/12
+01:56:21 glm-5.3-flash 4/12 run | qwen3.8-27b 6/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+01:58:21 glm-5.3-flash 6/12 run | qwen3.8-27b 6/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:00:22 glm-5.3-flash 6/12 run | qwen3.8-27b 8/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:02:22 glm-5.3-flash 7/12 run | qwen3.8-27b 8/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:04:22 glm-5.3-flash 7/12 run | qwen3.8-27b 8/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:06:23 glm-5.3-flash 8/12 run | qwen3.8-27b 9/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:08:23 glm-5.3-flash 8/12 run | qwen3.8-27b 9/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:10:23 glm-5.3-flash 9/12 run | qwen3.8-27b 9/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:12:23 glm-5.3-flash 9/12 run | qwen3.8-27b 10/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:14:24 glm-5.3-flash 11/12 run | qwen3.8-27b 10/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:16:24 glm-5.3-flash 11/12 run | qwen3.8-27b 11/12 run | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:18:24 glm-5.3-flash 12/12 | qwen3.8-27b 12/12 | deepseek-v4-flash 12/12 | gemma-4-26b-a4b 12/12
+02:18:24 ALL followup CELLS DONE AND JUDGED

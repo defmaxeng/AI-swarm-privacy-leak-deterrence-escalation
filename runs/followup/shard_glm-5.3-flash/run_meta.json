@@ -1,0 +1,30 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-09 01:32:20",
+   "start_ts": 1794205940.960139,
+   "argv": [
+    "--phase",
+    "followup",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/followup/shard_glm-5.3-flash",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 12,
+   "n_todo": 12,
+   "n_to_judge": 0,
+   "mock": false,
+   "end": "2026-11-09 02:16:30",
+   "minutes": 44.2,
+   "ok": 12,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

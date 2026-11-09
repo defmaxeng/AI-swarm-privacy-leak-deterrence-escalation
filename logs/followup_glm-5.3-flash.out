@@ -1,0 +1,15 @@
+[followup] EXPLORATORY, not pre-registered (D5). environment: NDA (variant A selected (gap 29.53 pp, control RLR 19.4%))
+[phase followup] 12 cells in this shard: 0 done, 0 to judge, 12 to run. mock=False
+  1/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 8.5 min
+  2/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 11.9 min
+  3/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 11.9 min
+  4/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 18.2 min
+  5/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 24.4 min
+  6/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 24.4 min
+  7/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 29.1 min
+  8/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 33.8 min
+  9/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 37.6 min
+  10/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 41.2 min
+  11/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 41.3 min
+  12/12 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 44.2 min
+[phase followup] finished in 44.2 min: {'ok': 12, 'crashes': 0, 'bad_tool_args': 0, 'escalation_calls': 0, 'eps_with_escalation': 0, 'judge_pending': 0}

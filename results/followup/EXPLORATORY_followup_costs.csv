@@ -1,0 +1,3 @@
+arm,episodes,activity_writes_per_episode,uptake,escalations,false_escalation_rate,diversion_rate,bypass_rate,judge_parse_failures,malformed_tool_args
+instr,24,8.542,,,,,,0,0
+instr_tool,24,10.0,0.0,0.0,,0.0,,0,0
