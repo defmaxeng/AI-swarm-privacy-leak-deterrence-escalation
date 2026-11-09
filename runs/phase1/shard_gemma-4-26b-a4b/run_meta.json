@@ -1,0 +1,48 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 18:11:33",
+   "start_ts": 1794179493.235002,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "gemma-4-26b-a4b",
+    "--out",
+    "runs/phase1/shard_gemma-4-26b-a4b",
+    "--workers",
+    "4"
+   ],
+   "n_cells": 15,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 18:33:42",
+   "start_ts": 1794180822.0079384,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "gemma-4-26b-a4b",
+    "--out",
+    "runs/phase1/shard_gemma-4-26b-a4b",
+    "--workers",
+    "2"
+   ],
+   "n_cells": 15,
+   "n_todo": 7,
+   "n_to_judge": 1,
+   "mock": false,
+   "end": "2026-11-08 19:08:57",
+   "minutes": 35.3,
+   "ok": 8,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 18:11:33",
+   "start_ts": 1794179493.3654127,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase1/shard_glm-5.3-flash",
+    "--workers",
+    "4"
+   ],
+   "n_cells": 15,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 18:33:43",
+   "start_ts": 1794180823.2988157,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase1/shard_glm-5.3-flash",
+    "--workers",
+    "2"
+   ],
+   "n_cells": 15,
+   "n_todo": 14,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 19:23:21",
+   "start_ts": 1794183801.185107,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "glm-5.3-flash",
+    "--out",
+    "runs/phase1/shard_glm-5.3-flash",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 15,
+   "n_todo": 8,
+   "n_to_judge": 1,
+   "mock": false,
+   "end": "2026-11-08 19:59:32",
+   "minutes": 36.2,
+   "ok": 9,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}

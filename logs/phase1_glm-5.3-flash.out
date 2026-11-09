@@ -1,0 +1,22 @@
+[phase 1] 15 cells in this shard: 0 done, 0 to judge, 15 to run. mock=False
+CRASH glm-5.3-flash|NDC|none|p8|s1000: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+CRASH glm-5.3-flash|NDA|none|p8|s1000: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+  1/15 done | crashes 2 | malformed tool args 0 | escalation calls 0 in 0 eps | 19.9 min
+[phase 1] 15 cells in this shard: 1 done, 0 to judge, 14 to run. mock=False
+  1/14 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 18.1 min
+CRASH glm-5.3-flash|NDA|none|p8|s1000: RuntimeError('All routes failed for glm-5.3-flash: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param\\\'
+  2/14 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 27.7 min
+  3/14 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 34.1 min
+  4/14 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 37.8 min
+  5/14 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 44.0 min
+[phase 1] 15 cells in this shard: 6 done, 1 to judge, 8 to run. mock=False
+  1/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 5.6 min
+  2/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 11.7 min
+  3/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 12.9 min
+  4/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 25.3 min
+  5/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 28.0 min
+  6/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 32.1 min
+  7/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 33.3 min
+  8/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 34.5 min
+  9/9 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 36.2 min
+[phase 1] finished in 36.2 min: {'ok': 9, 'crashes': 0, 'bad_tool_args': 0, 'escalation_calls': 0, 'eps_with_escalation': 0, 'judge_pending': 0}

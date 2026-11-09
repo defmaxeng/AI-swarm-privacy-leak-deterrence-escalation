@@ -1,0 +1,19 @@
+[phase 1] 15 cells in this shard: 0 done, 0 to judge, 15 to run. mock=False
+  1/15 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 6.6 min
+  2/15 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 8.8 min
+  3/15 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 9.8 min
+CRASH gemma-4-26b-a4b|NDB|none|p8|s1000: RuntimeError('All routes failed for gemma-4-26b-a4b: _Retryable(\'RateLimitError("Error code: 429 - {\\\'error\\\': {\\\'message\\\': \\\'Inference rate limit reached for this user; retry after 60 seconds\\\', \\\'type\\\': \\\'rate_limit_error\\\', \\\'param
+  4/15 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 14.3 min
+  5/15 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 15.3 min
+  6/15 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 20.4 min
+  7/15 done | crashes 1 | malformed tool args 0 | escalation calls 0 in 0 eps | 21.0 min
+[phase 1] 15 cells in this shard: 7 done, 1 to judge, 7 to run. mock=False
+  1/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 2.2 min
+  2/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 4.4 min
+  3/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 5.6 min
+  4/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 9.0 min
+  5/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 11.2 min
+  6/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 12.6 min
+  7/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 15.8 min
+  8/8 done | crashes 0 | malformed tool args 0 | escalation calls 0 in 0 eps | 35.3 min
+[phase 1] finished in 35.3 min: {'ok': 8, 'crashes': 0, 'bad_tool_args': 0, 'escalation_calls': 0, 'eps_with_escalation': 0, 'judge_pending': 0}

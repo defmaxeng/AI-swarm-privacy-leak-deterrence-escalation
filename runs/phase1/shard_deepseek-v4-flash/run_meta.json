@@ -1,0 +1,66 @@
+{
+ "runs": [
+  {
+   "start": "2026-11-08 18:11:33",
+   "start_ts": 1794179493.335889,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "deepseek-v4-flash",
+    "--out",
+    "runs/phase1/shard_deepseek-v4-flash",
+    "--workers",
+    "4"
+   ],
+   "n_cells": 15,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 18:33:43",
+   "start_ts": 1794180823.3909633,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "deepseek-v4-flash",
+    "--out",
+    "runs/phase1/shard_deepseek-v4-flash",
+    "--workers",
+    "2"
+   ],
+   "n_cells": 15,
+   "n_todo": 15,
+   "n_to_judge": 0,
+   "mock": false
+  },
+  {
+   "start": "2026-11-08 19:23:21",
+   "start_ts": 1794183801.7181115,
+   "argv": [
+    "--phase",
+    "1",
+    "--models",
+    "deepseek-v4-flash",
+    "--out",
+    "runs/phase1/shard_deepseek-v4-flash",
+    "--workers",
+    "3"
+   ],
+   "n_cells": 15,
+   "n_todo": 9,
+   "n_to_judge": 1,
+   "mock": false,
+   "end": "2026-11-08 19:52:34",
+   "minutes": 29.2,
+   "ok": 10,
+   "crashes": 0,
+   "bad_tool_args": 0,
+   "escalation_calls": 0,
+   "eps_with_escalation": 0,
+   "judge_pending": 0
+  }
+ ]
+}
