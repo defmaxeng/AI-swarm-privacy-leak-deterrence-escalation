@@ -1,2 +1,5 @@
 [pilot5_neutral] 0 saved episodes to judge without re-running
 [pilot5_neutral] 24 trials to run (0 already done). spend so far $0.0913
+  10 done, 0 errors, spend $0.0913
+  20 done, 0 errors, spend $0.0913
+[pilot5_neutral] finished: 24 ok, 0 errors, stopped=False, spend $0.0913
