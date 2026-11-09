@@ -44,6 +44,9 @@ def expected_cells(P, phase, selection=None):
     elif phase == "2":
         ctrl, disc, _ = load_selection(Path(selection))
         trials = pp.phase2_trials(P, ctrl, disc)
+    elif phase == "followup":
+        _, disc, _ = load_selection(Path(selection))
+        trials = pp.followup_trials(P, disc)
     else:
         trials = pp.smoke_trials(P)
     return {dedup_key(t): t for t in trials}
@@ -51,7 +54,7 @@ def expected_cells(P, phase, selection=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--phase", required=True, choices=["smoke", "1", "2"])
+    ap.add_argument("--phase", required=True, choices=["smoke", "1", "2", "followup"])
     ap.add_argument("--shards", nargs="+", required=True, help="shard folders (each holds episodes.jsonl)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--selection", default=str(ROOT / "results/phase1_selection.json"))

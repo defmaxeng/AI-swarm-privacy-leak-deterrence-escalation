@@ -27,7 +27,17 @@ SHARDS = [
     ("qwen3.8-27b", None, "runs/phase2/shard_qwen3.8-27b", "ADAPTION_API_KEY", 4),
     ("deepseek-v4-flash", None, "runs/phase2/shard_deepseek-v4-flash", "ADAPTION_API_KEY_2", 2),
 ]
-LOG = ROOT / "logs/phase2_supervisor.out"
+# Follow-up (NOT pre-registered, D5): instr vs instr_tool, disclosure env, seeds 3000+
+FOLLOWUP_SHARDS = [
+    ("glm-5.3-flash", None, "runs/followup/shard_glm-5.3-flash", "ADAPTION_API_KEY", 3),
+    ("qwen3.8-27b", None, "runs/followup/shard_qwen3.8-27b", "ADAPTION_API_KEY", 3),
+    ("deepseek-v4-flash", None, "runs/followup/shard_deepseek-v4-flash", "ADAPTION_API_KEY_2", 3),
+    ("gemma-4-26b-a4b", None, "runs/followup/shard_gemma-4-26b-a4b", "ADAPTION_API_KEY_2", 2),
+]
+PHASE = sys.argv[2] if len(sys.argv) > 2 else "2"   # "2" or "followup"
+if PHASE == "followup":
+    SHARDS = FOLLOWUP_SHARDS
+LOG = ROOT / f"logs/{'phase2' if PHASE == '2' else PHASE}_supervisor.out"
 
 
 def dotenv():
@@ -47,7 +57,8 @@ def log(msg):
 
 
 def expected(P, sel, model, part):
-    T = pp.phase2_trials(P, sel["control_env"], sel["disclosure_env"], [model])
+    T = (pp.phase2_trials(P, sel["control_env"], sel["disclosure_env"], [model]) if PHASE == "2"
+         else pp.followup_trials(P, sel["disclosure_env"], [model]))
     if part:
         k, n = map(int, part.split("/"))
         T = [t for i, t in enumerate(T) if i % n == k]
@@ -74,7 +85,7 @@ def running(model, part, out):
             cmd = " ".join(p.info["cmdline"] or [])
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
-        if "run_prereg.py" in cmd and "--phase 2" in cmd and f"--models {model}" in cmd and out in cmd.replace("\\", "/"):
+        if "run_prereg.py" in cmd and f"--phase {PHASE}" in cmd and f"--models {model}" in cmd and out in cmd.replace("\\", "/"):
             if (part is None and "--part" not in cmd) or (part and f"--part {part}" in cmd):
                 return True
     return False
@@ -99,15 +110,15 @@ def main():
             if left:
                 all_done = False
                 if not alive:
-                    cmd = [sys.executable, "src/run_prereg.py", "--phase", "2", "--models", model, "--out", out,
+                    cmd = [sys.executable, "src/run_prereg.py", "--phase", PHASE, "--models", model, "--out", out,
                            "--workers", str(workers)] + (["--part", part] if part else [])
-                    logf = open(ROOT / f"logs/phase2_{Path(out).name.replace('shard_', '')}.out", "a", encoding="utf-8")
+                    logf = open(ROOT / f"logs/{'phase2' if PHASE == '2' else PHASE}_{Path(out).name.replace('shard_', '')}.out", "a", encoding="utf-8")
                     subprocess.Popen(cmd, cwd=ROOT, stdout=logf, stderr=subprocess.STDOUT,
                                      env={**os.environ, "ADAPTION_API_KEY": env[keyname]})
                     log(f"RELAUNCH {tag} ({left} cells left, key {keyname}, {workers} workers)")
         log(" | ".join(status))
         if all_done:
-            log("ALL PHASE 2 CELLS DONE AND JUDGED")
+            log(f"ALL {PHASE} CELLS DONE AND JUDGED")
             return
         time.sleep(interval)
 

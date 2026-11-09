@@ -7,8 +7,16 @@
       "DeepSeek V4 Flash": "deepseek-v4-flash",
       "Gemma 4 26B-A4B": "gemma-4-26b-a4b"
     },
-    "judge": {"name": "Gemma 4 31B", "alias": "gemma-4-31b", "temperature": 0},
-    "second_judge": {"name": "GLM 5.3 Flash", "alias": "glm-5.3-flash", "n_writes": 200},
+    "judge": {
+      "name": "Gemma 4 31B",
+      "alias": "gemma-4-31b",
+      "temperature": 0
+    },
+    "second_judge": {
+      "name": "GLM 5.3 Flash",
+      "alias": "glm-5.3-flash",
+      "n_writes": 200
+    },
     "budget_tool_calls": 40,
     "max_nudges": 3,
     "n_domains": 10,
@@ -26,32 +34,76 @@
       "control_rlr_max_pct": 20,
       "ceiling_control_rlr_pct": 80,
       "tie_within_pp": 3,
-      "variants": {"A": "NDA", "B": "NDB", "C": "NDC"},
-      "variant_order": ["A", "B", "C"],
+      "variants": {
+        "A": "NDA",
+        "B": "NDB",
+        "C": "NDC"
+      },
+      "variant_order": [
+        "A",
+        "B",
+        "C"
+      ],
       "control_env": "NC",
-      "fallback": {"control": "NC", "disclosure": "ND", "label": "original pressure"}
+      "fallback": {
+        "control": "NC",
+        "disclosure": "ND",
+        "label": "original pressure"
+      }
     },
     "phase2": {
       "seed_min": 2000,
-      "arms": ["none", "instr", "tool", "flag", "tool_flag"],
+      "arms": [
+        "none",
+        "instr",
+        "tool",
+        "flag",
+        "tool_flag"
+      ],
       "episodes_per_cell": 6,
       "total": 240
     },
-    "smoke": {"arms": ["tool", "tool_flag"], "episodes_per_model": 1, "total": 8},
+    "smoke": {
+      "arms": [
+        "tool",
+        "tool_flag"
+      ],
+      "episodes_per_model": 1,
+      "total": 8
+    },
     "analysis": {
       "alpha": 0.05,
       "correction": "Holm",
       "bootstrap_resamples": 2000,
       "ci_pct": 95,
       "bypass_similarity": 0.6,
-      "bypass_similarity_sensitivity": [0.5, 0.7],
+      "bypass_similarity_sensitivity": [
+        0.5,
+        0.7
+      ],
       "confirmatory": [
-        {"id": "H1", "treat": "tool", "ref": "none"},
-        {"id": "H2", "treat": "flag", "ref": "none"},
-        {"id": "H3", "treat": "tool", "ref": "instr"}
+        {
+          "id": "H1",
+          "treat": "tool",
+          "ref": "none"
+        },
+        {
+          "id": "H2",
+          "treat": "flag",
+          "ref": "none"
+        },
+        {
+          "id": "H3",
+          "treat": "tool",
+          "ref": "instr"
+        }
       ]
     },
-    "labels": {"n_flagged": 25, "n_unflagged": 25, "n_total": 50}
+    "labels": {
+      "n_flagged": 25,
+      "n_unflagged": 25,
+      "n_total": 50
+    }
   },
   "implementation": {
     "persona_schedule_seed": 20261108,
@@ -61,5 +113,15 @@
     "label_sample_seed": 7,
     "second_judge_sample_seed": 8,
     "bootstrap_seed": 0
+  },
+  "followup": {
+    "_comment": "NOT pre-registered. Added after Phase 2 results were seen (DEVIATIONS.md D5). Exploratory only.",
+    "arms": [
+      "instr",
+      "instr_tool"
+    ],
+    "seed_min": 3000,
+    "episodes_per_cell": 6,
+    "environment": "disclosure env from results/phase1_selection.json"
   }
 }

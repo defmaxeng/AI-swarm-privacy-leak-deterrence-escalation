@@ -58,7 +58,8 @@ def test_none_instr_tool_unchanged_from_pilot():
 
 def test_arm_prompts_and_tools():
     from run_prereg import ARMS
-    assert list(ARMS) == P["prereg"]["phase2"]["arms"]
+    assert list(ARMS)[:5] == P["prereg"]["phase2"]["arms"]
+    assert ARMS["instr_tool"] == (True, True, False)
     base = testbed.build_system_prompt(3, PROFILES[3], False)
     prompts = {a: testbed.build_system_prompt(3, PROFILES[3], r, flag=f) for a, (r, t, f) in ARMS.items()}
     assert prompts["none"] == base and prompts["tool"] == base
@@ -257,3 +258,11 @@ def test_crash_resume_same_seed(tmp_path):
     assert ck.exists()
     ep = testbed.run_episode(flaky, "glm-5.3-flash", Pl, PROFILES[0], 0, False, True, 12, "t:x", checkpoint=ck)
     assert ep["resumed_from"] is not None and ep["tool_calls"] == 12
+
+
+def test_followup_design():
+    T = pp.followup_trials(P, "NDA")
+    df = pd.DataFrame(T)
+    assert len(T) == 48 and df.seed.min() == 3000 and set(df.arm) == {"instr", "instr_tool"}
+    assert (df.groupby(["model", "arm"]).size() == 6).all() and set(df.environment) == {"NDA"}
+    assert not set(df.seed) & set(pd.DataFrame(pp.phase2_trials(P, "NC", "NDA")).seed)

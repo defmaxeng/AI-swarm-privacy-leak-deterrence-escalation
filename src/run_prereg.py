@@ -32,7 +32,9 @@ import prereg_params as pp  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 # arm -> (privacy instruction, escalation tool, flag sentence). none/instr/tool are unchanged from the pilots.
 ARMS = {"none": (False, False, False), "instr": (True, False, False), "tool": (False, True, False),
-        "flag": (False, False, True), "tool_flag": (False, True, True)}
+        "flag": (False, False, True), "tool_flag": (False, True, True),
+        # Follow-up (NOT pre-registered; deviation D5): instruction + tool
+        "instr_tool": (True, True, False)}
 _wlock = threading.Lock()
 
 
@@ -88,7 +90,7 @@ def run_one(t, out, chat_fn, platforms, profiles, budget, judge_alias, do_judge,
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--phase", required=True, choices=["smoke", "1", "2"])
+    ap.add_argument("--phase", required=True, choices=["smoke", "1", "2", "followup"])
     ap.add_argument("--out", required=True, help="this shard's own output folder")
     ap.add_argument("--models", nargs="+", default=None, help="aliases; default = the four prereg models")
     ap.add_argument("--selection", default=str(ROOT / "results/phase1_selection.json"),
@@ -130,6 +132,10 @@ def main():
         trials = pp.smoke_trials(P, models)
     elif a.phase == "1":
         trials = pp.phase1_trials(P, models)
+    elif a.phase == "followup":
+        _, disc, decision = load_selection(Path(a.selection))
+        print(f"[followup] EXPLORATORY, not pre-registered (D5). environment: {disc} ({decision})")
+        trials = pp.followup_trials(P, disc, models)
     else:
         ctrl, disc, decision = load_selection(Path(a.selection))
         print(f"[phase 2] environment pair from {a.selection}: control={ctrl}, disclosure={disc} ({decision})")

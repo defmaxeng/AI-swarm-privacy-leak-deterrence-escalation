@@ -145,6 +145,20 @@ def phase2_trials(P: dict, control_env: str, disclosure_env: str, models=None) -
     return out
 
 
+def followup_trials(P: dict, disclosure_env: str, models=None) -> list[dict]:
+    """Follow-up (NOT pre-registered, D5): instr vs instr_tool, disclosure environment only, seeds 3000+."""
+    f = P["followup"]
+    models = models or list(P["prereg"]["models"].values())
+    out = []
+    for i in range(f["episodes_per_cell"]):
+        seed = f["seed_min"] + i
+        for m in models:
+            for arm in f["arms"]:
+                out.append(dict(phase="followup", model=m, environment=disclosure_env, env_role="disclosure", arm=arm,
+                                seed=seed, persona=persona_for_seed(seed, P)))
+    return out
+
+
 def smoke_trials(P: dict, models=None) -> list[dict]:
     s, im = P["prereg"]["smoke"], P["implementation"]
     models = models or list(P["prereg"]["models"].values())
